@@ -11,5 +11,27 @@ export default defineConfig({
     environment: 'happy-dom',
     setupFiles: '.vitest/setup',
     include: ['**/test.{ts,tsx}']
-  }
+  },
+  optimizeDeps: {
+    exclude:['@bh-digitalsolutions/ui-toolkit/loader']
+    } ,build: {
+    rollupOptions: {
+    output: {
+    chunkFileNames: (asset) => {
+    return asset.name.includes('bh-') ? 'assets/[name].js' : '[name]-[hash].js'
+    }
+    }
+    }
+    }
 })
+// optimizeDeps: {
+//   exclude:['@bh-digitalsolutions/ui-toolkit/loader']
+//   } ,build: {
+//   rollupOptions: {
+//   output: {
+//   chunkFileNames: (asset) => {
+//   return asset.name.includes('bh-') ? 'assets/[name].js' : '[name]-[hash].js'
+//   }
+//   }
+//   }
+//   }

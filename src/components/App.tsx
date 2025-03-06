@@ -2,6 +2,7 @@ import { deviceTableSchema } from 'constants/tableSchema';
 import './app.css';
 import { Table } from './Table';
 import { deviceListJsonDemo } from 'constants/devices';
+import { BhDivider } from '@bh-digitalsolutions/ui-toolkit-react/dist/components';
 
 function App() {
   const tableData = {data:deviceListJsonDemo, length:deviceListJsonDemo.length}
@@ -25,6 +26,7 @@ function App() {
         // onbhEventSelected={onRowSelectionChange}
         // onHeaderCtaClick={onHeaderCtaClick}
       />
+      <BhDivider />
     </div>
   )
 }
