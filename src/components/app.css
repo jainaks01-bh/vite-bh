@@ -1,1 +1,2 @@
-@import url(./node_modules/@bh-digitalsolutions/ui-toolkit/dist/bh-ui-toolkit/bh-ui-toolkit.css);
+@import url(@bh-digitalsolutions/ui-toolkit/dist/bh-ui-toolkit/bh-ui-toolkit.css);
+/*./node_modules/*/
